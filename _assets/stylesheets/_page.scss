@@ -1,0 +1,346 @@
+/* ==========================================================================
+   PAGE
+   ========================================================================== */
+
+/*
+   Main content
+   ========================================================================== */
+
+.page-content {
+  h2 {
+    @include font-size(24,yes,26);
+    @include media($small) {
+      @include font-size(28,yes,32);
+    }
+  }
+  h3 {
+    @include font-size(20,yes,22);
+    @include media($small) {
+      @include font-size(24,yes,26);
+    }
+  }
+  h4 {
+    @include font-size(18);
+    @include media($small) {
+      @include font-size(22);
+    }
+  }
+  h5, h6 {
+    @include font-size(16);
+    @include media($small) {
+      @include font-size(20);
+    }
+  }
+
+  /* Cleaner underlines for links */
+  a { text-decoration: none; }
+  p > a,
+  li > a,
+  td > a {
+    border-bottom: 1px solid mix($white, $link-color, 70%);
+    &:hover {
+      border-bottom-color: $link-color;
+      border-bottom-width: 2px;
+    }
+  }
+  .toc li > a {
+    border-bottom-width: 0;
+  }
+  .th-grid a,
+  .th-grid-full a,
+  p > .reversefootnote {
+    border-bottom-width: 0;
+  }
+
+  /* Introductory paragraph */
+  > p {
+    &:first-child {
+      @include font-size(20,yes,28);
+      @include media($small) {
+        @include font-size(24,yes,34);
+        a {
+          color: $text-color;
+          border-bottom-color: mix($white, $text-color, 70%);
+        }
+      }
+    }
+  }
+
+  .page-footer,
+  .pagination {
+    @include fill-parent;
+  }
+}
+
+/*
+   Post archives
+   ========================================================================== */
+
+.archive-wrap {
+  @include fill-parent;
+  margin-top: $gutter;
+  h3 {
+    @include font-size(16);
+    text-transform: uppercase;
+    a {
+      color: $text-color;
+    }
+  }
+  .page-content {
+    @include fill-parent;
+  }
+}
+
+/*
+   Default page title
+   ========================================================================== */
+
+
+.page-title {
+  @include fill-parent;
+  @extend .animated;
+  @extend .fadeInLeft;
+  animation-delay: 1s;
+  margin-top: $gutter;
+  h1 { /* Default page title */
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    @include font-size(24,no,24);
+    @include media($small) {
+      @include font-size(42,no,42);
+    }
+    @include media($medium) {
+      @include font-size(58,no,58);
+    }
+  }
+  h2 { /* Default page sub-headline */
+    margin-top: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    @include font-size(20,yes,1.25);
+    @include media($small) {
+      @include font-size(28,yes,1.25);
+    }
+    @include media($medium) {
+      @include font-size(32,yes,1.25);
+    }
+  }
+}
+
+/*
+   Featured page header (large image with text overlay)
+   ========================================================================== */
+
+.page-feature-header {
+  @include fill-parent;
+  position: relative;
+  margin-bottom: $gutter;
+  img {
+    width: 100%; /* Expand image to cover full width of header */
+  }
+  &.overlay .page-title { /* Position title on top of feature image */
+    @include media($small) {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      @include span-columns(10);
+      padding-bottom: 2 * $gutter;
+      margin-left: (-1 * $gutter);
+    }
+    @include media($medium) {
+      margin-left: (-2 * $gutter)
+    }
+    @include media($large) {
+      margin-left: (-2.5 * $gutter)
+    }
+  }
+  &.overlay h1 { /* Overlay page title */
+    @include media($small) {
+      box-shadow: -10px 0 0 $white, 10px 0 0 $white;
+      display: inline;
+      background: $white;
+      line-height: 1.4;
+      span {
+        padding: 4px 10px;
+      }
+    }
+  }
+  &.overlay h2 { /* Overlay page sub-headline */
+    margin-bottom: 0;
+    @include media($small) {
+      box-shadow: -10px 0 0 $white, 10px 0 0 $white;
+      display: inline;
+      background: $white;
+      line-height: 1.4;
+      span {
+        padding: 4px 10px;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.page-image { /* Make content images flush with edges on small screens */
+  position: relative;
+  margin-top: -1 * $gutter; /* Match .wrap padding */
+  margin-left: -1 * $gutter;
+  margin-right: -1 * $gutter;
+  @include media($medium) {
+    margin-top: -2 * $gutter; /* Match .wrap padding */
+    margin-left: -2 * $gutter;
+    margin-right: -2 * $gutter;
+  }
+  @include media($large) {
+    margin-top: -1.25 * $gutter; /* Match .wrap padding */
+    margin-left: -2.5 * $gutter;
+    margin-right: -2.5 * $gutter;
+  }
+
+  .image-credit { /* Position and style image credit caption */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 5px 7px;
+    background-color: rgba($black,.5);
+    color: $white;
+    font-family: $alt-font;
+    @include font-size(12,no);
+    text-align: right;
+    z-index: 10;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+   Headline anchors (show link icon on hover)
+   ========================================================================== */
+
+.header-link {
+  position: relative;
+  left: 0.5em;
+  opacity: 0;
+  font-size: 0.8em;
+  transition: opacity 0.2s ease-in-out 0.1s;
+  display: none;
+  @include media($medium) {
+    display: inline;
+  }
+}
+
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
+}
+
+/*
+   Tag links
+   ========================================================================== */
+
+.tag-box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include clearfix;
+  li {
+    display: inline-block;
+    @include font-size(14, 7);
+  }
+  a {
+    padding: 4px 6px;
+    margin-right: 2px;
+    text-decoration: none;
+    color: $text-color;
+    background-color: mix($white, $primary-color, 90%);
+    border-radius: $border-radius;
+    border-bottom-width: 0 !important;
+    span {
+      vertical-align: super;
+      color: $link-color;
+      @include font-size(10);
+    }
+  }
+}
+
+/*
+   Author profile
+   ========================================================================== */
+
+.author-wrapper {
+  display: inline-block;
+  position: relative;
+  padding: 20px;
+  border: 8px solid $border-color;
+  border-radius: $border-radius;
+}
+
+.author-image {
+  display: none;
+  @include media($small) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius;
+  }
+}
+
+.author-content {
+  @include media($small) {
+    word-wrap: break-word;
+    padding-left: 100px; /* avatar width + 20px padding */
+    min-height: 80px; /* match avatar height */
+  }
+}
+
+h3.author-name {
+  margin-top: 0;
+  @include font-size(20,no);
+}
+
+.author-bio {
+  margin-top: 0;
+  @include font-size(16,12);
+}
+
+.author-follow {
+  margin-top: 0;
+  @include font-size(16,no);
+}
+
+/*
+   Share this
+   ========================================================================== */
+
+.share-this {
+  padding: (2 * $gutter) 0;
+  @include media($large) {
+    padding: (1.25 * $gutter) 0;
+  }
+}
+
+/*
+   Comments
+   ========================================================================== */
+
+.comments {
+  h3 {
+    margin-top: 0;
+  }
+}
