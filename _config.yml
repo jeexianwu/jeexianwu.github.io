@@ -1,3 +1,4 @@
+encoding: UTF-8
 baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
 url: "jeexianwu.github.io" # the base hostname & protocol for your site.
 title: "username-blog"
