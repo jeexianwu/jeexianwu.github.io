@@ -1,91 +1,46 @@
-# Site wide configuration
-
-title: Made Mistakes
-description: "Personal website of designer slash illustrator Michael Rose."
-logo: site-logo.png
-teaser: default-teaser.png
-locale: en_US
-url: https://mademistakes.com
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "username.github.io" # the base hostname & protocol for your site.
+title: "username-blog"
 
 
-# Jekyll configuration
+paginate: 3 #articles per page
+paginate_path: /blog/page:num #makes pagination working
 
-permalink: /:categories/:title/
-lsi: true
-markdown: kramdown
-kramdown:
-  toc_levels: 1..2
-highlighter: rouge
+
+#contacts
+git: "https://github.com/railsr"  #Add your github url here.
+stackoverflow: "http://stackoverflow.com/users/1231365/railsr" #Add your stackoverflow url here.
+twitter: "https://twitter.com/railsr7"  #Add your twitter url here.
+
+#disqus comment
+disqus:
+    shortname: "test" #replace with your disqus comment short name
+
+#google analytics
+google:
+    tracking-id: "" #paste your tracking id here
 gems:
   - jekyll-sitemap
-  - jekyll-archives
-include: [".htaccess"]
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "node_modules", "Gruntfile.js", "package.json", ".jekyll-assets-cache"]
 
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
 
-# Plugin: jekyll-assets
-
-assets:
-  sources:
-    - _assets/javascripts
-    - _assets/stylesheets
-  js_compressor: uglifier
-  css_compressor: sass
-  cachebust: hard
-  cache: true
-  debug: false
-  version: 1
-
-
-# Plugin: jekyll-archives
-
-jekyll-archives:
-  enabled:
-    - tags
-    - year
-  layouts:
-    year: year_index
-    tag: tag_index
-  permalinks:
-    year: /:year/
-    tag: /tag/:name/
-
-
-# Site owner
-
-owner:
-  name: Michael Rose
-  email: michael@mademistakes.com
-  twitter: mmistakes
-  facebook: michaelrose
-  instagram: mmistakes
-  tumblr: mademistakes
-  github-repo: https://github.com/mmistakes/made-mistakes-jekyll/blob/master/
-  google:
-    ad-client: ca-pub-7328585512091257
-    ad-slot: 3049671934
-    analytics: UA-2011187-1
-    plus: https://plus.google.com/+MichaelRoseDesign/posts
-    verify: geapSKtvpBNDSfXVmF09E9CnaHGglbO61r4XgLZtEmo
-  bing:
-    verify: D81F4C18A6CB3018F64D7C827D953DFD
-  alexa:
-    verify: Y5DYjZ4VWlrQzBP5kcQJeOKLNas
-  yandex:
-    verify: 55a5419baf76a498
-  bio: "Just another boring, tattooed, time traveling designer from Buffalo. I enjoy eating chicken wings and sketching on an iPad."
-  avatar: bio-photo.jpg # 160x160 px image for author byline
-disqus-shortname: mmistakes
-
-
-# Collections
-
-collections:
-  faqs:
-    output: true
-    permalink: /:collection/:path/
-    title: FAQs
-  components:
-    output: false
-  colors:
-    output: false
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
