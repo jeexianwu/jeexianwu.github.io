@@ -1,12 +1,7 @@
 ---
 layout: default
-title: 搜不狐 --- 有关互联网、软件开发的热门话题
+title: IBIGNEW --- 渴望走在大牛的路上
 ---
-<!--
-<ul>
-  <li>[2013-05-13] &nbsp; &nbsp; <a href="/other/2013/05/13/migrate-to-new-site.html">把博客迁移到Github上</a></li>
-</ul>
--->
 
 <ul>
 　{% for post in site.posts %}

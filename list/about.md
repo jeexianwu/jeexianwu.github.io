@@ -1,28 +1,24 @@
 ---
 layout: default
-title: 关于搜不狐
+title: 关于爱大牛
 comments: true
 ---
 
-### 你可以通过下面的方式联系到我
-新浪微博：[郭宽Oct](http://weibo.com/royguo1988)
 
-QQ: 83534146
 
-E-Mail: royguo1988@gmail.com
+## 初衷
 
-Github: [http://github.com/royguo](http://github.com/royguo)
+一直希望能有个地方介绍互联网界的大牛的成长历程，特别是技术大牛们，他们的经历或许可以给予渴望成为大牛的人一点启发和激励，所以才有了本站<B>ibignew</B>.
 
-### 如果你也有以下爱好，我们会有讨论不完的话题
-机器学习、Linux、Web开发、数据结构和算法、Javascript
+>> 不是为了大牛而成为大牛，是责任、是追求极致的心，当然还有很重要的兴趣。
+>> 你可以不牛，但一定要尝试走向大牛的路上
+>> 生活也是大事业，ibignew, 爱大牛
 
-创业、股票、程序化交易、Dota、吃
+BigNew Means More Big More New Then More Stronger.
 
-### 价值观
 
-技术学习是兴趣驱动，所以决定尝试某项技术的首要思考不是工作前景
 
->> 技术分为术和道，具体的做事方式，开发方法称为术，思考事务的方式，设计的原理称为道，追求术的人一生劳累，而术也会从高深到普及再到落伍，但是道却永恒不变，值得大家追求。
->> ------ 《数学之美》
 
-谦虚谨慎，我们所理解的只是我们见到的世界的投影
+
+###Contact Me
+E-Mail: jeexianwu@gmail.com

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 编程技术
+title: 自我修炼
 comments: true
 ---
-## 编程技术
+## 自我修炼
 
 <ul>
 　{% for post in site.categories.program %}

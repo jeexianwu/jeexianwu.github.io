@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 产品思考
+title: 牛思产品
 comments: true
 ---
-## 产品思考
+## 牛思产品
 
 <ul>
 　{% for post in site.categories.product %}

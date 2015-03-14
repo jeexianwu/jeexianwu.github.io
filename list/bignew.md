@@ -1,12 +1,13 @@
 ---
 layout: default
-title: 生活杂记
+title: 大牛系列
 comments: true
 ---
-### 生活杂记
+
+### 一些大牛的成长历程
 
 <ul>
-　{% for post in site.categories.other %}
+　{% for post in site.categories.bignew %}
 　　<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 　{% endfor %}
 </ul>
