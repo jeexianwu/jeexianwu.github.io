@@ -1,3 +1,10 @@
+---
+layout: default
+title: spark-submit oom
+comments: true
+categories: [program]
+---
+
 ## Spark submit application with "java.lang.OutOfMemoryError: Java heap space" ##
 
 ### 1.问题描述
