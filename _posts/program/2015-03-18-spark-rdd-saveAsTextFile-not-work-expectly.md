@@ -1,6 +1,6 @@
 ---
 layout: default
-title: spark-submit oom
+title: spark rdd saveAsTextFile in local system not work
 comments: true
 categories: [program]
 ---
