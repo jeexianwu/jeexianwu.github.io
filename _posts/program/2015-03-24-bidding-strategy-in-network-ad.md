@@ -2,7 +2,7 @@
 layout: default
 title: 互联网广告实时竞价中竞价策略
 comments: true
-categories: [ads]
+categories: [product]
 ---
 
 ### 1.首先明确一下概念
@@ -34,7 +34,7 @@ categories: [ads]
 
 上面的出价方式最终都是映射到出价模型上，即：每次出价
 
-<img src="http://latex.codecogs.com/png.latex? BidPrice = BasePrice*(\frac{{CTR}'}{BaseCTR})^{\lambda }">
+<img src="http://latex.codecogs.com/png.latex? BidPrice = BasePrice*(\frac{CTR'}{BaseCTR})^{\lambda}">
  (1)
 
 不同的出价方式映射到上式中的BasePrice，对应关系可以是：
